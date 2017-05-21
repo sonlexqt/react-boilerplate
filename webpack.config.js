@@ -2,7 +2,7 @@ const path = require('path');
 var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
-  entry: './app/index.js',
+  entry: './app/index.jsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './dist/assets'),
@@ -12,12 +12,12 @@ module.exports = {
     rules: [
       { 
         test: /\.js$/, 
-        loader: 'babel-loader', 
+        use: ['babel-loader', 'eslint-loader'], 
         exclude: /node_modules/,
       },
       { 
         test: /\.jsx$/, 
-        loader: 'babel-loader', 
+        use: ['babel-loader', 'eslint-loader'], 
         exclude: /node_modules/,
       },
       {
