@@ -8,6 +8,9 @@ module.exports = {
     path: path.resolve(__dirname, './dist/assets'),
     publicPath: '/assets',
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
     rules: [
       { 
