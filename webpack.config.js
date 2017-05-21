@@ -1,4 +1,5 @@
 const path = require('path');
+var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   entry: './app/index.js',
@@ -28,4 +29,7 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, './app'),
   },
+  plugins: [
+    new DashboardPlugin(),
+  ],
 };
